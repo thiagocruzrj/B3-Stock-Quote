@@ -1,9 +1,18 @@
+using System;
+
 namespace INOA.Domain.Entities
 {
     public class StockQuote
     {
-        public string AssetName { get; private set; }
-        public decimal SaleReferencePrice { get; private set; }
-        public decimal PurchaseReferencePrice { get; private set; }
+        public StockQuote(string assetName, decimal saleReferencePrice, decimal purchaseReferencePrice)
+        {
+            AssetName = assetName;
+            SaleReferencePrice = saleReferencePrice;
+            PurchaseReferencePrice = purchaseReferencePrice;
+        }
+
+        public string AssetName { get; set; }
+        public decimal SaleReferencePrice { get; set; }
+        public decimal PurchaseReferencePrice { get; set; }
     }
 }
